@@ -1,0 +1,48 @@
+#login-page{
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  font-size: 1.2rem;
+  @include flex-layout();
+  .login-wrap{
+    width: 500px;
+    padding: 2rem 3rem;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.6);
+    *{
+      display: block;  //width값 설정을 원할히 가능
+      margin: 1rem 0;
+    }
+    h2{
+      font-size: $font-large;
+    }
+//지정한 스타일이 checkbox부분에는 적용이 안되게
+    label:nth-of-type(1),
+    label:nth-of-type(2){
+      @include floation-label;
+    }
+    .error{
+      color: $main-color;
+    }
+    button:nth-of-type(1){
+      @include btn-style();
+      width: 100%;
+    }
+    button:nth-of-type(2){
+      @include btn-style(#666);
+      width: 100%;
+    }
+    //또는
+    a{
+      text-align: center;
+      text-decoration: underline;
+    }
+    label:nth-of-type(3){
+      display: flex;
+      gap: 10px;
+    }
+    .sign-up{
+      strong{display: inline-block;}
+    }
+  }
+}

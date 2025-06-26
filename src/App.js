@@ -1,9 +1,19 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.scss";
+import MainLayout from "./components/MainLayout";
+import Main from "./components/Main";
+import Login from "./components/Login";
 
 const App = () => {
   return (
-    <div>
-      
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainLayout />}>  {/* 가장 메인 레이아웃 */}
+          <Route index element={<Main />} />
+          <Route path="login" element={<Login />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 };
 

@@ -1,0 +1,14 @@
+@import './styles/font.scss';
+@import './styles/variable.scss'; //변수값이 있기에 mixim보다 먼저 선행되어야 함
+@import './styles/mixin.scss';
+@import './styles/global.scss';
+
+@import './styles/MainLayout.scss';
+@import './styles/Main.scss';
+@import './styles/Mambership.scss';
+@import './styles/Login.scss';
+@import './styles/DetailBar.scss';
+@import './styles/MovieList.scss';
+@import './styles/WhyJoin.scss';
+@import './styles/FAQ.scss';
+@import './styles/Footer.scss';

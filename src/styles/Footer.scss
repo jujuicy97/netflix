@@ -1,0 +1,38 @@
+.footer{
+  position: relative;
+  z-index: 20;
+  width: 70%;
+  margin: 2rem auto;
+  padding-bottom: 3rem;   //하단에 여백을 주려면, margin은 중첩관계 때문에 사용x, padding처리가 먹힘
+  > *{                    //footer밑의 직속 자식에게만 적용되게
+    margin: 1rem 0;
+  }
+  p{
+    font-size: 1.5rem;
+  }
+  .netflix{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    @include tablet{
+      grid-template-columns: repeat(2,1fr);
+    }
+    @include mobile{
+      grid-template-columns: 1fr;
+    }
+    li{
+      padding: 5px 0;
+    }
+    a{
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+  .myproject{
+    margin-top: 3rem;
+    font-size: 1.3rem;
+    *{
+      margin: 5px 0;
+      text-align: right;
+    }
+  }
+}

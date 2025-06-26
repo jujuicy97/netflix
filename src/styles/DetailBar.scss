@@ -1,0 +1,66 @@
+.detail-bar{
+  @include flex-layout(row);
+  gap: 2rem;
+  transition: 0.3s;
+  @include tablet{ 
+    flex-direction: column; 
+    align-items: start;
+    gap: 0;
+  }
+  @include mobile{  }
+  &:hover{
+    transform: scale(1.03);
+    filter: brightness(1.3);
+  }
+}
+.detail-icon{
+  font-size: 70px;
+}
+.detail-txt{
+  font-size: $font-medium;
+  border-radius: 20px;
+  padding: 1.3rem;
+  background-image: linear-gradient(45deg, #2f2038, #11103f);
+  flex: 1;
+  @include flex-layout(row);
+  @include tablet{ 
+    width: 100%;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+  }
+  p{
+    flex: 1;
+  }
+  button{
+    @include btn-style(#777);
+
+  }
+}
+.curve-wrap{
+  position: relative;
+  top: 2vh;
+  height: 100px;
+  overflow: hidden;
+  div{
+    border-top-left-radius: 110% 230%;
+    border-top-right-radius: 110% 230%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 60px;
+  }
+  .curve-circle{
+    top: 5px;
+    z-index: 2;
+    background: radial-gradient(
+                  50% 500% at 50% -420%,
+                  rgba(64, 97, 231, 0.4) 80%,
+                  rgba(16, 16, 16, 0.1) 100%
+                ), $bg-color;
+  }
+  .gradient-line{
+    top: 0;
+    background: radial-gradient(circle,rgba(224, 13, 30, 1) 0%, rgba(156, 36, 89, 0.8) 50%, rgba(72, 21, 43, 0.1) 100%);
+  }
+}
